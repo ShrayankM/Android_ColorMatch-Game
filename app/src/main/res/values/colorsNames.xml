@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="colorsNames">
+        <item>Yellow</item>
+        <item>Orange</item>
+        <item>Pink</item>
+        <item>Red</item>
+        <item>Golden</item>
+        <item>Orchid</item>
+        <item>Brown</item>
+        <item>Sky Blue</item>
+        <item>Gray</item>
+        <item>Purple</item>
+        <item>Maroon</item>
+        <item>Indigo</item>
+        <item>Lime</item>
+        <item>Green</item>
+        <item>Blue</item>
+    </string-array>
+</resources>
