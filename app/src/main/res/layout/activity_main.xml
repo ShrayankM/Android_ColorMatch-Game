@@ -4,36 +4,54 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/game_name"
+    <Button
+        android:id="@+id/start_button"
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:text="@string/game_title"
+        android:layout_height="wrap_content"
+        android:background="@android:color/background_light"
+        android:onClick="start_game"
+        android:padding="10sp"
+        android:text="@string/start_game"
         android:textAlignment="center"
-        android:textColor="@color/colorPrimary"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        android:typeface="monospace"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/game_name2" />
+
+    <TextView
+        android:id="@+id/game_name1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="monospace"
+        android:text="@string/name1"
+        android:textAlignment="center"
+        android:textColor="#092C97"
         android:textSize="100sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/start_button"
+    <TextView
+        android:id="@+id/game_name2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="start_game"
-        android:text="@string/start_game"
+        android:fontFamily="monospace"
+        android:text="@string/name2"
         android:textAlignment="center"
-        android:textSize="40sp"
+        android:textColor="#EC9D16"
+        android:textSize="100sp"
         android:textStyle="bold"
-        android:typeface="normal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/game_name" />
+        app:layout_constraintEnd_toEndOf="@+id/game_name1"
+        app:layout_constraintStart_toStartOf="@+id/game_name1"
+        app:layout_constraintTop_toBottomOf="@+id/game_name1" />
 </androidx.constraintlayout.widget.ConstraintLayout>

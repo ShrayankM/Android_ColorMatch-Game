@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">Color Match</string>
     <string name="game_title">COLOR MATCH</string>
+    <string name="name1">COLOR</string>
+    <string name="name2">MATCH</string>
     <string name="start_game">START</string>
     <string name="color_name">Color_Name</string>
     <string name="left_color">Left_Color</string>

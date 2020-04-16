@@ -2,6 +2,7 @@ package com.example.color_game;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.content.res.TypedArray;
 import android.os.Bundle;
@@ -19,7 +20,8 @@ public class GameActivity extends AppCompatActivity {
     Handler h = new Handler();
     Random r = new Random();
     int text_color = 0 , text_name = 0;
-    public int game_score = 0;
+    public int game_score = 0,prev_game_score = 0;
+    //public boolean timer_flag = true;
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -32,6 +34,7 @@ public class GameActivity extends AppCompatActivity {
         startGame();
     }
     public void startGame(){
+            //timer_flag = true;
             final String[] colorNames = getResources().getStringArray(R.array.colorsNames);
             TypedArray ta = getResources().obtainTypedArray(R.array.colors);
             text_color = r.nextInt(14);
@@ -84,14 +87,13 @@ public class GameActivity extends AppCompatActivity {
                     }
                 }
             });
-            System.out.println(game_score);
             timer(3000);
     }
 
     public void timer(int milli) {
         Runnable run = new Runnable() {
             public void run() {
-                    GameActivity.this.startGame();
+                        GameActivity.this.startGame();
             }
         };
          this.h.postDelayed(run, (long) milli);
